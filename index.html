@@ -3,11 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AYUSH TENNIS KING</title>
+    <title>Ayush Tennis King - Premium Predictions</title>
+    <!-- Tailwind CSS import -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+    <!-- Google Fonts import -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
     
+    <!-- Custom styling for extra effects -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0b0514;
+            background-image: radial-gradient(circle at 50% 0%, #2a164d 0%, #0b0514 60%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        /* Glowing border animation for profile */
+        .profile-glow {
+            background: linear-gradient(45deg, #ff5e00, #ff00b3, #7b00ff, #ff5e00);
+            background-size: 400% 400%;
+            animation: gradientBorder 5s ease infinite;
+        }
+
+        @keyframes gradientBorder {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Pulse animation for CTA button */
+        .btn-glow {
+            box-shadow: 0 0 25px rgba(255, 94, 0, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-glow:hover {
+            box-shadow: 0 0 40px rgba(255, 94, 0, 0.7);
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        /* Stats card styling */
+        .glass-card {
+            background: rgba(30, 20, 50, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+
     <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -25,152 +67,133 @@
     src="https://www.facebook.com/tr?id=1234010304264876&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Poppins', 'sans-serif'],
-                    },
-                    colors: {
-                        darkBg: '#030712', /* Deep modern dark blue/black */
-                        brandAccent: '#00f0ff', /* Premium Neon Cyan */
-                        textMuted: '#9ca3af',
-                    },
-                    boxShadow: {
-                        'glow-accent': '0 0 30px rgba(0, 240, 255, 0.4)',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            background-color: #030712;
-            color: white;
-            overflow-x: hidden;
-        }
-        /* Premium Background Glows */
-        .bg-glow {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(3, 7, 18, 0) 70%);
-            top: -200px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-            border-radius: 50%;
-            pointer-events: none;
-        }
-        .bg-glow-purple {
-            position: absolute;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(3, 7, 18, 0) 70%);
-            bottom: -300px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-            border-radius: 50%;
-            pointer-events: none;
-        }
-        /* Image Logo CSS */
-        .logo-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid #00f0ff;
-            object-fit: cover;
-            background: #000;
-            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
-        }
-    </style>
 </head>
-<body class="antialiased min-h-screen relative font-sans">
-    <div class="bg-glow"></div>
-    <div class="bg-glow-purple"></div>
+<body class="flex flex-col items-center justify-center py-10 px-4">
 
-    <div class="max-w-4xl mx-auto px-4 py-12 flex flex-col items-center">
-        
-        <div class="mb-6 flex justify-center">
-            <img src="ayush tennis.jpg" alt="Ayush Tennis King Logo" class="logo-image">
+    <!-- Main Container -->
+    <div class="max-w-[450px] w-full flex flex-col items-center">
+
+        <!-- Profile Picture Section -->
+        <div class="relative mb-6">
+            <div class="profile-glow p-1 rounded-full w-32 h-32 flex items-center justify-center">
+                <!-- Text Logo -->
+                <div class="w-full h-full bg-[#0b0514] rounded-full flex items-center justify-center">
+                    <span class="text-3xl font-black bg-gradient-to-r from-[#ff6a00] to-[#ee0979] text-transparent bg-clip-text tracking-wider">
+                        AYUSH
+                    </span>
+                </div>
+            </div>
         </div>
 
-        <h1 class="text-4xl md:text-5xl font-extrabold text-center tracking-tight mb-1">
-            AYUSH <br class="md:hidden">
-            <span class="text-brandAccent">TENNIS KING</span>
-        </h1>
-        <p class="text-textMuted text-xs md:text-sm tracking-[0.3em] uppercase font-semibold mb-8">
-            Tennis Mastery
-        </p>
+        <!-- Titles Section -->
+        <h1 class="text-4xl font-black tracking-widest text-white mb-1 uppercase text-center">AYUSH TENNIS KING</h1>
+        <h2 class="text-2xl font-bold text-[#ff5e00] tracking-widest mb-3 text-center drop-shadow-md">TENNIS EXPERT</h2>
+        <p class="text-[10px] sm:text-xs text-[#a78bfa] tracking-[0.25em] mb-8 font-semibold uppercase text-center">Premium Tennis Predictions</p>
 
-        <a href="https://t.me/+1vM1hW6TQMQyNDk1" target="_blank" rel="noopener noreferrer" 
-           onclick="fbq('track', 'Subscribe'); console.log('Subscribe event triggered!');" 
-           class="w-full max-w-md bg-gradient-to-r from-[#00f0ff] to-[#0080ff] text-black font-extrabold py-4 px-8 rounded-xl text-lg hover:scale-105 transition-transform duration-300 shadow-glow-accent mb-4 uppercase tracking-wide text-center block">
+        <!-- CTA Button (Subscribe) -->
+        <a href="https://t.me/+1vM1hW6TQMQyNDk1" onclick="fbq('track', 'Subscribe');" class="w-full bg-gradient-to-r from-[#ff6a00] to-[#ee0979] text-white font-bold text-lg py-4 rounded-xl text-center btn-glow mb-4">
             SUBSCRIBE NOW
         </a>
-        
-        <p class="text-gray-400 text-sm mb-6">100K+ members getting verified tips</p>
 
-        <div class="bg-white/5 border border-white/10 rounded-full px-6 py-2 mb-10 flex items-center gap-2 backdrop-blur-md">
-            <span class="text-gray-400 text-sm font-semibold tracking-wider">ENDS IN:</span>
-            <span class="text-brandAccent font-bold text-sm tracking-widest" id="countdown">14:59</span>
+        <!-- Subtext -->
+        <p class="text-xs text-gray-400 mb-8 font-medium">100K+ members getting verified Tennis signals</p>
+
+        <!-- Countdown Timer -->
+        <div class="glass-card rounded-full px-6 py-2 flex items-center gap-2 mb-10 border border-[#4a2b75]">
+            <span class="text-xs text-gray-300 font-semibold tracking-wider">OFFER ENDS IN:</span>
+            <span id="timer" class="text-[#ff5e00] font-bold text-sm tracking-wider">05:00</span>
         </div>
 
-        <div class="grid grid-cols-3 gap-3 md:gap-6 w-full max-w-2xl mb-8">
-            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-brandAccent/50 hover:bg-white/10">
-                <i class="fa-solid fa-check text-brandAccent text-xl md:text-2xl mb-2"></i>
-                <h3 class="text-white font-bold text-lg md:text-xl">100%</h3>
-                <p class="text-gray-400 text-[10px] md:text-xs font-semibold uppercase tracking-wider mt-1">Accuracy</p>
+        <!-- Stats Grid (3 Columns) -->
+        <div class="grid grid-cols-3 gap-3 w-full mb-10">
+            
+            <!-- Box 1 -->
+            <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition hover:bg-[#2a1a4a]">
+                <!-- Tennis Theme Icon -->
+                <svg class="w-6 h-6 text-[#ff5e00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 5.5A8 8 0 0 1 5.5 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 5.5A8 8 0 0 0 18.5 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="text-center">
+                    <h3 class="text-lg font-bold text-white leading-tight">99%</h3>
+                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">Accuracy</p>
+                </div>
             </div>
-            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-brandAccent/50 hover:bg-white/10">
-                <i class="fa-regular fa-star text-brandAccent text-xl md:text-2xl mb-2"></i>
-                <h3 class="text-white font-bold text-lg md:text-xl">100K+</h3>
-                <p class="text-gray-400 text-[10px] md:text-xs font-semibold uppercase tracking-wider mt-1">Members</p>
+
+            <!-- Box 2 -->
+            <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition hover:bg-[#2a1a4a]">
+                <!-- Users Icon -->
+                <svg class="w-6 h-6 text-[#ff5e00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+                <div class="text-center">
+                    <h3 class="text-lg font-bold text-white leading-tight">100K+</h3>
+                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">Members</p>
+                </div>
             </div>
-            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-brandAccent/50 hover:bg-white/10">
-                <i class="fa-solid fa-gem text-brandAccent text-xl md:text-2xl mb-2"></i>
-                <h3 class="text-white font-bold text-lg md:text-xl">24/7</h3>
-                <p class="text-gray-400 text-[10px] md:text-xs font-semibold uppercase tracking-wider mt-1">Support</p>
+
+            <!-- Box 3 -->
+            <div class="glass-card rounded-2xl p-4 flex flex-col items-center justify-center gap-2 transition hover:bg-[#2a1a4a]">
+                <!-- Support/Diamond Icon -->
+                <svg class="w-6 h-6 text-[#ff5e00]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+                <div class="text-center">
+                    <h3 class="text-lg font-bold text-white leading-tight">24/7</h3>
+                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">Signals</p>
+                </div>
             </div>
+
         </div>
 
-        <div class="flex items-center justify-center gap-4 md:gap-8 text-sm text-gray-400 mb-8">
-            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandAccent"></i> Verified</div>
-            <span class="text-gray-700">•</span>
-            <div>Secure</div>
-            <span class="text-gray-700">•</span>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brandAccent"></i> Instant</div>
+        <!-- Trust Badges Footer -->
+        <div class="flex items-center justify-center gap-4 text-xs font-semibold text-gray-400">
+            <div class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                Verified
+            </div>
+            <span>•</span>
+            <div class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                Secure
+            </div>
+            <span>•</span>
+            <div class="flex items-center gap-1">
+                <svg class="w-3.5 h-3.5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+                Instant
+            </div>
         </div>
 
     </div>
 
+    <!-- Countdown Timer Script -->
     <script>
-        // Set an initial time of 15 minutes
-        let timeInSeconds = 15 * 60; 
-        const countdownEl = document.getElementById('countdown');
+        // 5 minute ka timer script
+        let timeInSecs = 5 * 60; // 5 minutes
+        const timerElement = document.getElementById('timer');
 
-        function updateCountdown() {
-            if (!countdownEl) return;
-            const minutes = Math.floor(timeInSeconds / 60);
-            let seconds = timeInSeconds % 60;
+        function updateTimer() {
+            let minutes = Math.floor(timeInSecs / 60);
+            let seconds = timeInSecs % 60;
 
+            // Zero padding if less than 10
+            minutes = minutes < 10 ? '0' + minutes : minutes;
             seconds = seconds < 10 ? '0' + seconds : seconds;
-            let displayMinutes = minutes < 10 ? '0' + minutes : minutes;
 
-            countdownEl.innerHTML = `${displayMinutes}:${seconds}`;
+            timerElement.textContent = `${minutes}:${seconds}`;
 
-            if (timeInSeconds > 0) {
-                timeInSeconds--;
+            if (timeInSecs > 0) {
+                timeInSecs--;
             } else {
-                timeInSeconds = 0; 
+                // Agar timer khatam ho jaye toh phir se 5 min pe reset kardo (FOMO create karne ke liye)
+                timeInSecs = 5 * 60;
             }
         }
 
-        setInterval(updateCountdown, 1000);
-        updateCountdown(); // Initial call
+        // Har ek second me timer update karein
+        setInterval(updateTimer, 1000);
+        updateTimer();
     </script>
 </body>
 </html>
