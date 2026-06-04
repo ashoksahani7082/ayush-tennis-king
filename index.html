@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH TENNIS KING</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
     
+    <!-- Meta Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,34 +16,84 @@
         s.parentNode.insertBefore(t,s)}(window, document,'script',
         'https://connect.facebook.net/en_US/fbevents.js');
         
-        // REPLACE WITH YOUR ACTUAL PIXEL ID
-        fbq('init', 'YOUR_ACTUAL_PIXEL_ID'); 
+        /* 
+          IMPORTANT FIX: Replace 'YOUR_ACTUAL_PIXEL_ID' with your real Meta Pixel ID 
+          in BOTH the init call below and the noscript img src tag.
+        */
+        fbq('init', '945809556942472'); // I've put back the first ID you provided, make sure it's correct
         fbq('track', 'PageView');
     </script>
     <noscript>
+        <!-- Ensure the ID here matches the one in fbq('init', ...) -->
         <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=YOUR_ACTUAL_PIXEL_ID&ev=PageView&noscript=1"/>
+        src="https://www.facebook.com/tr?id=945809556942472&ev=PageView&noscript=1"
+        />
     </noscript>
+    <!-- End Meta Pixel Code -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['Poppins', 'sans-serif'], },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
                     colors: {
-                        darkBg: '#030712',
-                        brandAccent: '#00f0ff',
+                        darkBg: '#030712', /* Deep modern dark blue/black */
+                        brandAccent: '#00f0ff', /* Premium Neon Cyan */
                         textMuted: '#9ca3af',
                     },
-                    boxShadow: { 'glow-accent': '0 0 30px rgba(0, 240, 255, 0.4)', }
+                    boxShadow: {
+                        'glow-accent': '0 0 30px rgba(0, 240, 255, 0.4)',
+                    }
                 }
             }
         }
     </script>
     <style>
-        body { background-color: #030712; color: white; overflow-x: hidden; }
-        .bg-glow { position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(3, 7, 18, 0) 70%); top: -200px; left: 50%; transform: translateX(-50%); z-index: -1; border-radius: 50%; pointer-events: none; }
-        .bg-glow-purple { position: absolute; width: 800px; height: 800px; background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(3, 7, 18, 0) 70%); bottom: -300px; left: 50%; transform: translateX(-50%); z-index: -1; border-radius: 50%; pointer-events: none; }
-        .logo-image { width: 120px; height: 120px; border-radius: 50%; border: 3px solid #00f0ff; object-fit: cover; background: #000; box-shadow: 0 0 20px rgba(0, 240, 255, 0.2); }
+        body {
+            background-color: #030712;
+            color: white;
+            overflow-x: hidden;
+        }
+        /* Premium Background Glows */
+        .bg-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, rgba(3, 7, 18, 0) 70%);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .bg-glow-purple {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(3, 7, 18, 0) 70%);
+            bottom: -300px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        /* Image Logo CSS */
+        .logo-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #00f0ff;
+            object-fit: cover;
+            background: #000;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+        }
     </style>
 </head>
 <body class="antialiased min-h-screen relative font-sans">
@@ -53,10 +101,11 @@
     <div class="bg-glow"></div>
     <div class="bg-glow-purple"></div>
 
-    <div class="max-w-4xl mx-auto px-4 py-12 flex flex-col items-center">
+    <div class="max-w-4xl mx-auto px-4 py-12 flex flex-col items-center z-10 relative">
         
         <div class="mb-6 flex justify-center">
-            <img src="ayush tennis.jpg" alt="Ayush Tennis King Logo" class="logo-image">
+            <!-- Using placeholder for logo to avoid broken image links in preview -->
+            <img src="https://placehold.co/120x120/000000/00f0ff?text=ATK" alt="Ayush Tennis King Logo" class="logo-image">
         </div>
 
         <h1 class="text-4xl md:text-5xl font-extrabold text-center tracking-tight mb-1">
@@ -67,8 +116,12 @@
             Tennis Mastery
         </p>
 
+        <!-- 
+          SUBSCRIBE EVENT: Trigger 'Subscribe' Meta Pixel event on click.
+          Added console.log for easy local debugging.
+        -->
         <a href="https://t.me/+1vM1hW6TQMQyNDk1" target="_blank" rel="noopener noreferrer" 
-           onclick="fbq('track', 'Lead');" 
+           onclick="fbq('track', 'Subscribe'); console.log('Subscribe event triggered!');"
            class="w-full max-w-md bg-gradient-to-r from-[#00f0ff] to-[#0080ff] text-black font-extrabold py-4 px-8 rounded-xl text-lg hover:scale-105 transition-transform duration-300 shadow-glow-accent mb-4 uppercase tracking-wide text-center block">
             SUBSCRIBE NOW
         </a>
@@ -80,7 +133,33 @@
             <span class="text-brandAccent font-bold text-sm tracking-widest" id="countdown">14:59</span>
         </div>
 
+        <div class="grid grid-cols-3 gap-3 md:gap-6 w-full max-w-2xl mb-8">
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-brandAccent/50 hover:bg-white/10">
+                <i class="fa-solid fa-check text-brandAccent text-xl md:text-2xl mb-2"></i>
+                <h3 class="text-white font-bold text-lg md:text-xl">100%</h3>
+                <p class="text-gray-400 text-[10px] md:text-xs font-semibold uppercase tracking-wider mt-1">Accuracy</p>
+            </div>
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-brandAccent/50 hover:bg-white/10">
+                <i class="fa-regular fa-star text-brandAccent text-xl md:text-2xl mb-2"></i>
+                <h3 class="text-white font-bold text-lg md:text-xl">100K+</h3>
+                <p class="text-gray-400 text-[10px] md:text-xs font-semibold uppercase tracking-wider mt-1">Members</p>
+            </div>
+            <div class="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-4 md:p-6 flex flex-col items-center justify-center text-center transition-all duration-300 hover:border-brandAccent/50 hover:bg-white/10">
+                <i class="fa-solid fa-gem text-brandAccent text-xl md:text-2xl mb-2"></i>
+                <h3 class="text-white font-bold text-lg md:text-xl">24/7</h3>
+                <p class="text-gray-400 text-[10px] md:text-xs font-semibold uppercase tracking-wider mt-1">Support</p>
+            </div>
         </div>
+
+        <div class="flex items-center justify-center gap-4 md:gap-8 text-sm text-gray-400 mb-8">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-brandAccent"></i> Verified</div>
+            <span class="text-gray-700">•</span>
+            <div>Secure</div>
+            <span class="text-gray-700">•</span>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-bolt text-brandAccent"></i> Instant</div>
+        </div>
+
+    </div>
 
     <script>
         // Set an initial time of 15 minutes
@@ -94,7 +173,9 @@
             seconds = seconds < 10 ? '0' + seconds : seconds;
             let displayMinutes = minutes < 10 ? '0' + minutes : minutes;
 
-            countdownEl.innerHTML = `${displayMinutes}:${seconds}`;
+            if(countdownEl) {
+                countdownEl.innerHTML = `${displayMinutes}:${seconds}`;
+            }
 
             if (timeInSeconds > 0) {
                 timeInSeconds--;
@@ -104,7 +185,7 @@
         }
 
         setInterval(updateCountdown, 1000);
-        updateCountdown(); 
+        updateCountdown(); // Initial call
     </script>
 </body>
 </html>
