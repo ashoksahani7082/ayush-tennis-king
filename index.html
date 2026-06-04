@@ -4,36 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AYUSH TENNIS KING</title>
-    
-    <!-- Meta Pixel Code -->
-    <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        
-        /* 
-          IMPORTANT FIX: Replace 'YOUR_ACTUAL_PIXEL_ID' with your real Meta Pixel ID 
-          in BOTH the init call below and the noscript img src tag.
-        */
-        fbq('init', '945809556942472'); // I've put back the first ID you provided, make sure it's correct
-        fbq('track', 'PageView');
-    </script>
-    <noscript>
-        <!-- Ensure the ID here matches the one in fbq('init', ...) -->
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=945809556942472&ev=PageView&noscript=1"
-        />
-    </noscript>
-    <!-- End Meta Pixel Code -->
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1234010304264876');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1234010304264876&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <script>
         tailwind.config = {
             theme: {
@@ -97,15 +89,13 @@
     </style>
 </head>
 <body class="antialiased min-h-screen relative font-sans">
-    
     <div class="bg-glow"></div>
     <div class="bg-glow-purple"></div>
 
-    <div class="max-w-4xl mx-auto px-4 py-12 flex flex-col items-center z-10 relative">
+    <div class="max-w-4xl mx-auto px-4 py-12 flex flex-col items-center">
         
         <div class="mb-6 flex justify-center">
-            <!-- Using placeholder for logo to avoid broken image links in preview -->
-            <img src="https://placehold.co/120x120/000000/00f0ff?text=ATK" alt="Ayush Tennis King Logo" class="logo-image">
+            <img src="ayush tennis.jpg" alt="Ayush Tennis King Logo" class="logo-image">
         </div>
 
         <h1 class="text-4xl md:text-5xl font-extrabold text-center tracking-tight mb-1">
@@ -116,12 +106,8 @@
             Tennis Mastery
         </p>
 
-        <!-- 
-          SUBSCRIBE EVENT: Trigger 'Subscribe' Meta Pixel event on click.
-          Added console.log for easy local debugging.
-        -->
         <a href="https://t.me/+1vM1hW6TQMQyNDk1" target="_blank" rel="noopener noreferrer" 
-           onclick="fbq('track', 'Subscribe'); console.log('Subscribe event triggered!');"
+           onclick="fbq('track', 'Subscribe'); console.log('Subscribe event triggered!');" 
            class="w-full max-w-md bg-gradient-to-r from-[#00f0ff] to-[#0080ff] text-black font-extrabold py-4 px-8 rounded-xl text-lg hover:scale-105 transition-transform duration-300 shadow-glow-accent mb-4 uppercase tracking-wide text-center block">
             SUBSCRIBE NOW
         </a>
@@ -167,15 +153,14 @@
         const countdownEl = document.getElementById('countdown');
 
         function updateCountdown() {
+            if (!countdownEl) return;
             const minutes = Math.floor(timeInSeconds / 60);
             let seconds = timeInSeconds % 60;
 
             seconds = seconds < 10 ? '0' + seconds : seconds;
             let displayMinutes = minutes < 10 ? '0' + minutes : minutes;
 
-            if(countdownEl) {
-                countdownEl.innerHTML = `${displayMinutes}:${seconds}`;
-            }
+            countdownEl.innerHTML = `${displayMinutes}:${seconds}`;
 
             if (timeInSeconds > 0) {
                 timeInSeconds--;
